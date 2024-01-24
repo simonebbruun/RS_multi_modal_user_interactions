@@ -74,11 +74,11 @@ This data contains the items that were possible for the user to buy at the time 
    model_session.py  
    model_late_fusion.py  
    model_knowledge_distillation.py  
-   model_generative_imputation.py  
+   model_generative_imputation_step_1.py model_generative_imputation_step_2.py model_generative_imputation_step_3.py  
    model_neutral_imputation.py  
    model_keyword.py  
    model_latent_feature.py  
-   model_relative_representation.py  
+   model_relative_representation_step_1.py model_relative_representation_step_2.py model_relative_representation_step_3.py  
 2. Evaluate the models over the test set using  
    evaluation_popular.py  
    evaluation_conversation.py  
