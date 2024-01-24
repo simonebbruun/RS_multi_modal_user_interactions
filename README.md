@@ -14,7 +14,7 @@ This repository contains the data and source code for **Utilizing Multi-Modal Us
 
 ## Dataset
 
-We publish a real-world dataset from the insurance domain with multi-modal user interactions that can be used in recommendation models.  
+We publish a real-world dataset from the insurance domain with multi-modal user interactions that can be used in recommendation models. The dataset is anonymized.  
 Download the 6 files: data_users.csv, data_conversations_embedding.csv, data_conversations_keyword.csv, data_sessions.csv, data_purchase_events.csv, data_post_filter.csv.
 
 
