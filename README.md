@@ -77,16 +77,9 @@ This data contains the items that were possible for the user to buy at the time 
    model_generative_imputation.py  
    model_neutral_imputation.py  
    model_keyword.py  
-   model_latent_feature.py
+   model_latent_feature.py  
    model_relative_representation.py  
-2. Analyze the importance of event order and visualize the input representations using
-   shuffle_keyword.py  
-   shuffle_latent_feature.py
-   shuffle_relative_representation.py
-   tsne_keyword.py
-   tsne_latent_feature.py
-   tsne_relative_representation.py
-3. Evaluate the models over the test set using
+2. Evaluate the models over the test set using  
    evaluation_popular.py  
    evaluation_conversation.py  
    evaluation_session.py  
@@ -95,5 +88,5 @@ This data contains the items that were possible for the user to buy at the time 
    evaluation_generative_imputation.py  
    evaluation_neutral_imputation.py  
    evaluation_keyword.py  
-   evaluation_latent_feature.py
+   evaluation_latent_feature.py  
    evaluation_relative_representation.py  
