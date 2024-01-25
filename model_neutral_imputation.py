@@ -18,7 +18,7 @@ from sklearn import metrics
 ''' Data preprocessing. '''
 # Importing data.
 users = pd.read_csv('data_users.csv')
-conversations = pd.read_csv('data_conversations_embedding.csv')
+conversations = pd.concat((pd.read_csv('data_conversations_embedding_1.csv'),pd.read_csv('data_conversations_embedding_2.csv')),axis=0)
 sessions = pd.read_csv('data_sessions.csv')
 purchases = pd.read_csv('data_purchase_events.csv')
 post_filter = pd.read_csv('data_post_filter.csv')
@@ -82,6 +82,8 @@ post_filter = post_filter.drop(['purchase_event_id'], axis=1).values
 train_x1, valid_x1, train_x2, valid_x2, train_y, valid_y, train_w, valid_w = train_test_split(users_conv, users_ses, purchases, post_filter, test_size=0.1, shuffle=False)
 
 del users
+del conversations
+del sessions
 del users_conv
 del users_ses
 del purchases
