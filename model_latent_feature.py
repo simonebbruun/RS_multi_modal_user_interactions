@@ -22,7 +22,7 @@ from sklearn import metrics
 # Importing data.
 users = pd.read_csv('data_users.csv')
 sessions = pd.read_csv('data_sessions.csv')
-conversations = pd.read_csv('data_conversations_embedding.csv')
+conversations = pd.concat((pd.read_csv('data_conversations_embedding_1.csv'),pd.read_csv('data_conversations_embedding_2.csv')),axis=0)
 purchases = pd.read_csv('data_purchase_events.csv')
 post_filter = pd.read_csv('data_post_filter.csv')
 
@@ -39,8 +39,6 @@ users_conv = users[~users['conversation_id'].isna()]
 
 users_conv = users_conv[['purchase_event_id', 'event_number', 'conversation_id']].merge(conversations, how = 'left')
 users_conv = users_conv.drop(['sentence_number', 'sentence_speaker'], axis=1)
-del conversations
-gc.collect()
 
 # Averaging embeddings.
 users_conv = users_conv.groupby(['purchase_event_id', 'event_number', 'conversation_id'], as_index=False).mean()
@@ -93,6 +91,8 @@ post_filter = post_filter.drop(['purchase_event_id'], axis=1).values
 train_x1, valid_x1, train_x2, valid_x2, train_x3, valid_x3, train_y, valid_y, train_w1, valid_w1, train_w2, valid_w2 = train_test_split(users[:,:,0:768], users[:,:,769:824], users[:,:,768:769], purchases, weights, post_filter, test_size=0.1, shuffle=False)
 
 del users
+del conversations
+del sessions
 del users_conv
 del users_ses
 del purchases
