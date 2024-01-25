@@ -9,7 +9,7 @@ from tensorflow.keras.models import load_model
 ''' Data preprocessing. '''
 # Importing data.
 users = pd.read_csv('data_users.csv')
-conversations = pd.read_csv('data_conversations_embedding.csv')
+conversations = pd.concat((pd.read_csv('data_conversations_embedding_1.csv'),pd.read_csv('data_conversations_embedding_2.csv')),axis=0)
 sessions = pd.read_csv('data_sessions.csv')
 purchases = pd.read_csv('data_purchase_events.csv')
 post_filter = pd.read_csv('data_post_filter.csv')
