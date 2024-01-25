@@ -16,7 +16,7 @@ from tensorflow.keras.utils import set_random_seed
 ''' Data preprocessing. '''
 # Importing data.
 users = pd.read_csv('data_users.csv')
-conversations = pd.read_csv('data_conversations_embedding.csv')
+conversations = pd.concat((pd.read_csv('data_conversations_embedding_1.csv'),pd.read_csv('data_conversations_embedding_2.csv')),axis=0)
 sessions = pd.read_csv('data_sessions.csv')
 
 
