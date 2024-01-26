@@ -9,7 +9,18 @@ from tensorflow.keras.models import load_model
 ''' Data preprocessing. '''
 # Importing data.
 users = pd.read_csv('data_users.csv')
-conversations = pd.concat((pd.read_csv('data_conversations_embedding_1.csv'),pd.read_csv('data_conversations_embedding_2.csv')),axis=0)
+conversations = pd.concat((pd.read_csv('data_conversations_embedding/data_conversations_embedding_1.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_2.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_3.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_4.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_5.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_6.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_7.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_8.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_9.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_10.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_11.csv'),
+                           pd.read_csv('data_conversations_embedding/data_conversations_embedding_12.csv')),axis=0)
 sessions = pd.read_csv('data_sessions.csv')
 purchases = pd.read_csv('data_purchase_events.csv')
 post_filter = pd.read_csv('data_post_filter.csv')
