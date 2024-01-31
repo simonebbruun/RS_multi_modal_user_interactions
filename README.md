@@ -15,7 +15,8 @@ This repository contains the data and source code for **Utilizing Multi-Modal Us
 ## Dataset
 
 We publish a real-world dataset from the insurance domain with multi-modal user interactions that can be used in recommendation models. The dataset is anonymized.  
-Download the 6 files: data_users.csv, data_conversations_embedding.csv, data_conversations_keyword.csv, data_sessions.csv, data_purchase_events.csv, data_post_filter.csv.
+Download the files: data_users.csv, data_conversations_keyword.csv, data_sessions.csv, data_purchase_events.csv, data_post_filter.csv   
+and the folder: data_conversations_embedding
 
 
 ## Dataset Format
@@ -30,14 +31,6 @@ This data contains the users. Each user has had one or more purchase events with
 - session_id. The ID of a web session.
 - event_number. A number specifying the order of conversations/web sessions.
 
-### data_conversations_embedding.csv
-
-This data contains the conversations that the user had prior to the user's purchase event. Each conversation consists of multiple sentences represented with text embeddings. The data contains 771 columns:
-- conversation_id. The ID of a conversation.
-- sentence_number. A number specifying the order of sentences.
-- sentence_speaker. The speaker of the sentence (user or agent).
-- embedding_1 - embedding_768. Text embeddings computed with a pre-trained language-specific BERT model.
-
 ### data_conversations_keyword.csv
 
 This data contains the conversations that the user had prior to the user's purchase event. Each conversation consists of multiple sentences represented with keywords. The data contains 4 columns:
@@ -45,6 +38,15 @@ This data contains the conversations that the user had prior to the user's purch
 - sentence_number. A number specifying the order of sentences.
 - sentence_speaker. The speaker of the sentence (user or agent).
 - keywords. List with the IDs of the keywords in the sentence.
+
+### data_conversations_embedding_(1-107).csv
+
+This data is split into multiple files due to file size limitations.
+The data contains the conversations that the user had prior to the user's purchase event. Each conversation consists of multiple sentences represented with text embeddings. The data contains 771 columns:
+- conversation_id. The ID of a conversation.
+- sentence_number. A number specifying the order of sentences.
+- sentence_speaker. The speaker of the sentence (user or agent).
+- embedding_1 - embedding_768. Text embeddings computed with a pre-trained language-specific BERT model.
 
 ### data_sessions.csv
 
