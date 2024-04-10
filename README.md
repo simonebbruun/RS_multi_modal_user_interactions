@@ -1,5 +1,5 @@
 # RS_multi_modal_user_interactions
-This repository contains the data and source code for **Dataset and Models for Item Recommendation Using Multi-Modal User Interactions**.
+This repository contains the data and source code for [Dataset and Models for Item Recommendation Using Multi-Modal User Interactions](https://doi.org/10.1145/3626772.3657881).
 
 ## Requirements
 
