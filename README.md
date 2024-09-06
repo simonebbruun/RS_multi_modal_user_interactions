@@ -73,8 +73,7 @@ This data contains the items that were possible for the user to buy at the time 
 1. Train and validate the models using  
    model_popular.py  
    model_conversation.py  
-   model_session.py  
-   model_late_fusion.py  
+   model_session.py   
    model_knowledge_distillation.py  
    model_generative_imputation_step_1.py  
    model_generative_imputation_step_2.py  
